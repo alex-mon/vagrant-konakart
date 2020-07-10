@@ -16,7 +16,7 @@ echo "${KONAKART_COMMUNITY_DOWNLOAD_URL}"
 
 echo -e "$YELLOW = = = = Starting software provisioning... = = = = $NC"
 apt-get update
-#apt-get upgrade -y
+apt-get upgrade -y
 apt-get install -y curl
 apt-get install -y mysql-server
 apt-get install -y openjdk-8-jre

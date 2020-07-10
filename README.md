@@ -10,7 +10,7 @@ Vagrant file to provision KonaKart on ubuntu64.
 
 ## Install process
 
-By default, *KonaKart Comunity Edition* **Version 9.2.0.0** is downloaded and installed automatically, but you can manually override that by downloading the installer manually and placing it in the `shared_files` folder, with the file renamed to `KonaKartInstaller` instead of whatever filename it had.
+By default, *KonaKart Comunity Edition* **Version 9.2.0.0** is downloaded and installed automatically, but you can manually override that by downloading the installer manually and placing it in the `shared_files` folder, with the installer executable file renamed to `KonaKartInstaller` instead of whatever filename it had.
 
 To create the machine:
 1. From the command line, move into this repository's folder `cd vagrant-konakart`
@@ -29,7 +29,7 @@ with this line:
 config.vm.box = "ubuntu/bionic64"
 ```
 
-That can easily be changed by removing from `VagrantFile` the following line:  
+To run the Virtual Machine in headless mode, just remove from `VagrantFile` the following line:  
 ```ruby
 vb.gui = true # Show the VM UI when starting it.
 ```
