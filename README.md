@@ -17,7 +17,19 @@ To create the machine:
 2. Run `vagrant up`
 3. After some minutes, if everything went well, KonaKart will be up and running.
 
-By default, the Virtual machine does **NOT** run in "headless" mode. That can easily be changed by removing from `VagrantFile` the following line:  
+By default, the Virtual machine is a desktop version and does **NOT** run in "headless" mode.
+
+You can use a server version if you want by replacing the following lines in `VagrantFile`
+```ruby
+config.vm.box = "peru/ubuntu-18.04-desktop-amd64"
+config.vm.box_version = "20200707.01"
+```
+with this line:
+```ruby
+config.vm.box = "ubuntu/bionic64"
+```
+
+That can easily be changed by removing from `VagrantFile` the following line:  
 ```ruby
 vb.gui = true # Show the VM UI when starting it.
 ```
